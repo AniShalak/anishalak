@@ -29,12 +29,19 @@ html, body {
     flex-direction: column;  /* Stack elements vertically */
     justify-content: space-between; /* Push content to top and bottom */
     height: 100%;            /* Full height to distribute items */
+    padding-bottom: 1rem;
 }
 
 /* Apply specific styling to each bottom section */
 .box1 h4, .box2 p, .spotify-link {
     margin-top: auto;        /* Push this element to the bottom */
     padding-bottom: 1rem;    /* Add some space at the bottom */
+}
+
+/* Apply specific styling to each bottom section */
+.box1 h3, .box2 grid-container {
+    padding-bottom: 1rem;    /* Add some space at the bottom */
+    margin-bottom: 20vh; /* Space below h3 based on viewport height */
 }
 
 /* Styles for the left container */
@@ -82,26 +89,37 @@ html, body {
 
 /* Styles for the center container */
 .box2 {
-    background-color: white; /* White for visualization */
-    text-align: center; /* Center align text horizontally */
-    display: flex; /* Use Flexbox for layout */
-    flex-direction: column; /* Vertical alignment */
-    justify-content: flex-start; /* Align content to the top */
-    padding: 9vh 0 1rem; /* Responsive padding */
-    color: black; /* Text color */
-    flex: 1.3; /* Make this container larger */
-    font-size: 1rem; /* Font size */
+    background-color: white; 
+    text-align: center; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: flex-start; 
+    padding: 8vh 0 1rem; 
+    color: black; 
+    flex: 1.3; 
+    font-size: 1rem; 
     font-weight: bold;
+    position: relative; /* For proper alignment of the inner content */
+}
+
+/* Remove the absolute positioning from p */
+.box2 p {
+    margin-top: auto; /* Flexbox: pushes the <p> to the bottom */
+    font-size: 1rem;
+    color: black;
+    text-align: center;
+    padding-bottom: 1rem; /* Ensure consistent space at the bottom */
+    margin-bottom: 0; /* Override default margin */
 }
 
 /* Box2: Layout for the 3x3 grid of images */
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(3, 143px); /* 3 columns of 143px width */
-    grid-template-rows: repeat(3, 184px);    /* 3 rows of 184px height */
-    gap: 1px; /* 1px gap between frames */
+    grid-template-columns: repeat(3, 30%); /* 3 columns of 143px width */
+    grid-template-rows: repeat(3, 32%);    /* 3 rows of 184px height */
+    gap: 0.3%; /* 1px gap between frames */
     justify-content: center; /* Center the grid horizontally in the container */
-    margin-top: 45px; /* Set this to 0px to remove extra margin */
+    margin-bottom: 1rem; /* Remove margins for better spacing */
     align-items: start; /* Align content to the top */
     margin-bottom: 10vh; /* Space for 1|2 */
 }
@@ -116,8 +134,8 @@ html, body {
 /* Styles for the frame with a blur effect on hover */
 .frame {
     background-color: white; /* Background for visualization */
-    width: 143px; /* Fixed frame width */
-    height: 184px; /* Fixed frame height */
+    width: 100%; /* Fixed frame width */
+    height: 100%; /* Fixed frame height */
     transition: filter 0.3s ease; /* Smooth transition for the filter */
     position: relative; /* Allows absolute positioning for the text */
     overflow: hidden; /* Hides overflow */
@@ -137,7 +155,7 @@ html, body {
     color: black; /* Text color */
     transition: opacity 0.3s ease; /* Smooth transition for the opacity */
     opacity: 0; /* Start hidden */
-    font-size: 0.9rem; /* Responsive font size */
+    font-size: 0.75rem; /* Responsive font size */
 }
 
 /* Show text on hover */
@@ -145,7 +163,7 @@ html, body {
     opacity: 1; /* Fade in text on hover */
 }
 
-/* 1|2 */
+
 .page-link {
     cursor: pointer;
     font-weight: normal;
@@ -177,15 +195,20 @@ html, body {
     background-color: white; /* White for visualization */
     padding: 0.5rem 1.5rem; /* Responsive padding */
     color: black; /* Text color */
+    position: relative; /* Positioning context for hidden text */
 }
 
 /* Hidden text in container 3 */
+/* Align hidden text inside box3 */
 .hidden-text {
     display: none; /* Initially hidden */
     color: black;
-    font-size: 1rem; /* Responsive font size */
-    margin-top: 13vh; /* Space based on viewport height */
+    font-size: 1rem;
+    position: relative; /* Position relative inside box3 */
+    padding-left: 1.5rem; /* Ensure same padding as box1 h2 */
+    padding-top: 3.7rem; /* Adjust top padding for alignment */
 }
+
 
 /* Additional styles for the Spotify link */
 .spotify-link {
@@ -283,7 +306,7 @@ html, body {
     .grid-container {
         grid-template-columns: repeat(3, 30vw); /* Adjust grid for smaller screens */
         grid-template-rows: repeat(3, 25vw); /* Adjust grid rows */
-        gap: 1px; /* Maintain 1px gap between frames */
+        gap: 0.3%; /* Maintain 1px gap between frames */
     }
     .frame {
         width: 30vw; /* Responsive frame width */
@@ -293,3 +316,4 @@ html, body {
         padding: 1rem; /* Less padding for modal on smaller screens */
     }
 }
+
