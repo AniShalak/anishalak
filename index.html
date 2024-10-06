@@ -17,16 +17,16 @@
     <div class="container">
         <div class="box box1">
             <h1>aniashalak</h1>
-            <h2>graphic designer and photographer<br> based in Prague</h2>
-            <h3>
+            <h2>graphic designer and photographer<br> based in Prague<br><br>
                 mob: +420 776-652-913<br>
                 mail to: aniashalak28@gmail.com<br>
                 ig: sunnniannni
-            </h3>
-            <h4>
+            </h2>
+                
+            <h3>
                 <a id="about-link" href="#">about</a><br>
                 <a id="archive-link" href="#">projects archive</a>
-            </h4>
+            </h3>
         </div>
         <div class="box box2" id="box2">
             <div class="grid-container">
@@ -76,8 +76,8 @@
 
          <script>
             const frameContentPage1 = [
-                { imgSrc: "flower1.jpg", text: "№1 dont blink<br><br><br><br><br><br><br><br><br><br>2022" },
-                { imgSrc: "flower2.jpg", text: "№2 Howold he me<br><br><br><br><br><br><br><br><br><br>2022" },
+                { imgSrc: "flower1.jpg", text: "№1 dont blink<br><br><br><br><br><br><br><br><br>2022" },
+                { imgSrc: "flower2.jpg", text: "№2 Howold he me<br><br><br><br><br><br><br><br><br>2022" },
                 { imgSrc: "flower3.jpg", text: "Text for Image 3" },
                 { imgSrc: "flower4.jpg", text: "Text for Image 4" },
                 { imgSrc: "flower5.jpg", text: "Text for Image 5" },
@@ -136,7 +136,7 @@
 
                 if (pageNumber === 1) {
                     archiveText.innerHTML = "01 Dogs<br>02 Who are you<br>03 Roses<br>04 Meeeeeet me in forest ful<br>05 I know you<br>06 I love you<br>07 Hello it banny ravvit<br>08 Men in sund<br>09 The last but not least";
-                    aboutText.innerHTML = "Premised on the notion of ‘regenerative utility’, leather goods label Yu Mei calibrates the codes of luxury and functionality, always with reverence for the environment...";
+                    aboutText.innerHTML = "premised on the notion of ‘regenerative utility’, leather goods label Yu Mei calibrates the codes of luxury and functionality, always with reverence for the environment...";
                     archiveText.style.display = 'block'; // Show archive text for Page 1
                 } else {
                     archiveText.innerHTML = "bue bue"; // Custom message for Page 2
@@ -150,7 +150,7 @@
         </script>
 
         <div class="box box3" id="hidden-container">
-            <p class="hidden-text" id="about-text">Premised on the notion of ‘regenerative utility’, leather goods label Yu Mei calibrates the codes of luxury and functionality, always with reverence for the environment. Founder Jessie Wong partnered with us to realise a comprehensive, ongoing rebrand grounded in the Yu Mei brand pillars of materiality, practicality and regeneration. With a view to accentuating premium functionality within a coherent aesthetic ecosystem, we took cues from the vocabulary of archiving and indexing to build a design system balanced on elegance and practicality.</p>
+            <p class="hidden-text" id="about-text">premised on the notion of ‘regenerative utility’, leather goods label Yu Mei calibrates the codes of luxury and functionality, always with reverence for the environment. Founder Jessie Wong partnered with us to realise a comprehensive, ongoing rebrand grounded in the Yu Mei brand pillars of materiality, practicality and regeneration. With a view to accentuating premium functionality within a coherent aesthetic ecosystem, we took cues from the vocabulary of archiving and indexing to build a design system balanced on elegance and practicality.</p>
             <p class="hidden-text" id="archive-text">01 Dogs<br>02 Who are you<br>03 Roses<br>04 Meeeeeet me in forest ful<br>05 I know you<br>06 I love you<br>07 Hello it banny ravvit<br>08 Men in sund<br>09 The last but not least</p>
             <div class="clock" id="clock"></div>
             <!-- Spotify Link -->
@@ -204,109 +204,169 @@
     
     <script >
         
+// Define fullscreen content for Page 1
+const fullScreenContentPage1 = [
+    {
+        leftText: `<div class="lefttext"><p5>vinca minor</p5><br><br>
+the issue with left padding not working in your leftdiv is likely caused by the fact that you are using a flexbox layout with justifyContent and alignitems, which can sometimes override the expected behavior of padding in certain contexts. to ensure the padding works as expected, make sure you're applying it correctly, and the flexbox properties don't interfere with it. Here's a step-by-step breakdown to troubleshoot and fix it</div>`,
+        rightContent: `<div class="right-content">
+            <div class="half-images">
+                <img src="shi.gif" class="half-img" alt="Image 2">
+                <img src="poster2.jpg" class="half-img" alt="Image 2">
+            </div>
+ <img src="z10.jpg">
+        </div>`
+    },
+    {
+        leftText: "Hello from Page 1, Frame 2!",
+        rightContent: `<div style="width: 100px; height: 100px; background-color: blue;"></div>`
+    },
+    {
+        leftText: "Hello from Page 1, Frame 3!",
+        rightContent: `<div style="width: 100px; height: 100px; background-color: green;"></div>`
+    },
+    {
+        leftText: "Hello from Page 1, Frame 4!",
+        rightContent: `<div style="width: 100px; height: 100px; background-color: orange;"></div>`
+    },
+    {
+        leftText: "Hello from Page 1, Frame 5!",
+        rightContent: `<div style="width: 100px; height: 100px; background-color: yellow;"></div>`
+    },
+    {
+        leftText: "Hello from Page 1, Frame 6!",
+        rightContent: `<div style="width: 100px; height: 100px; background-color: purple;"></div>`
+    },
+    {
+        leftText: "Hello from Page 1, Frame 7!",
+        rightContent: `<div style="width: 100px; height: 100px; background-color: pink;"></div>`
+    },
+    {
+        leftText: "Hello from Page 1, Frame 8!",
+        rightContent: `<div style="width: 100px; height: 100px; background-color: cyan;"></div>`
+    },
+    {
+        leftText: "Hello from Page 1, Frame 9!",
+        rightContent: `<div style="width: 100px; height: 100px; background-color: magenta;"></div>`
+    },
+];
 
-    // Define fullscreen content for Page 1
-    const fullScreenContentPage1 = [
-        {
-            leftText: "Hello from Page 1, Frame 1!",
-            rightContent: `<div style="width: 100px; height: 100px; background-color: red;"></div>
-            <div style="width: 100px; height: 200px; background-color: yellow; margin-top: 10px;"></div>
-            <div style="width: 100px; height: 200px; background-color: green; margin-top: 10px;"></div>
-            <div style="width: 100px; height: 200px; background-color: yellow; margin-top: 10px;"></div>
-            <div style="width: 100px; height: 200px; background-color: green; margin-top: 10px;"></div>`
-        },
-        {
-            leftText: "Hello from Page 1, Frame 2!",
-            rightContent: `<div style="width: 100px; height: 100px; background-color: blue;"></div>`
-        },
-        // Add content for frames 3-9 for Page 1
-        {
-            leftText: "Hello from Page 1, Frame 3!",
-            rightContent: `<div style="width: 100px; height: 100px; background-color: green;"></div>`
-        },
-        
-        {
-            leftText: "Hello from Page 1, Frame 4!",
-            rightContent: `<div style="width: 100px; height: 100px; background-color: green;"></div>`
-        },
-        
-    
-        // Add similar entries for all 9 frames on Page 1
-    ];
+// Define fullscreen content for Page 2
+const fullScreenContentPage2 = [
+    {
+        leftText: `<div class="lefttext"><p5>ph01</p5><br><br>
+the issue with left padding not working in your leftdiv is likely caused by the fact that you are using a flexbox layout with justifyContent and alignitems, which can sometimes override the expected behavior of padding in certain contexts. to ensure the padding works as expected, make sure you're applying it correctly, and the flexbox properties don't interfere with it. Here's a step-by-step breakdown to troubleshoot and fix it</div>`,
+        rightContent: `<div class="right-content">
+ <img src="a.jpg"> 
+ <img src="a2.jpg">
+        </div>`
+    },
+    {
+        leftText: "Welcome to Page 2, Frame 2!",
+        rightContent: `<div style="width: 100px; height: 100px; background-color: yellow;"></div>`
+    },
+    {
+        leftText: "Welcome to Page 2, Frame 3!",
+        rightContent: `<div style="width: 100px; height: 100px; background-color: green;"></div>`
+    },
+    {
+        leftText: "Welcome to Page 2, Frame 4!",
+        rightContent: `<div style="width: 100px; height: 100px; background-color: blue;"></div>`
+    },
+    {
+        leftText: "Welcome to Page 2, Frame 5!",
+        rightContent: `<div style="width: 100px; height: 100px; background-color: orange;"></div>`
+    },
+    {
+        leftText: "Welcome to Page 2, Frame 6!",
+        rightContent: `<div style="width: 100px; height: 100px; background-color: pink;"></div>`
+    },
+    {
+        leftText: "Welcome to Page 2, Frame 7!",
+        rightContent: `<div style="width: 100px; height: 100px; background-color: teal;"></div>`
+    },
+    {
+        leftText: "Welcome to Page 2, Frame 8!",
+        rightContent: `<div style="width: 100px; height: 100px; background-color: gray;"></div>`
+    },
+    {
+        leftText: "Welcome to Page 2, Frame 9!",
+        rightContent: `<div style="width: 100px; height: 100px; background-color: violet;"></div>`
+    },
+];
 
-    // Define fullscreen content for Page 2
-    const fullScreenContentPage2 = [
-        {
-            leftText: "Welcome to Page 2, Frame 1!",
-            rightContent: `<div style="width: 100px; height: 100px; background-color: black;"></div>`
-        },
-        {
-            leftText: "Welcome to Page 2, Frame 2!",
-            rightContent: `<div style="width: 100px; height: 100px; background-color: yellow;"></div>`
-        },
-        // Add content for frames 3-9 for Page 2
-    ];
 
     let currentPage = 1;  // Track the current page
 
-    // Function to open full-screen layout for a specific frame
-    function openNewLayout(frameIndex) {
-        const fullScreenLayout = document.createElement('div');
-        fullScreenLayout.style.position = 'fixed';
-        fullScreenLayout.style.top = '0';
-        fullScreenLayout.style.left = '0';
-        fullScreenLayout.style.width = '100vw';
-        fullScreenLayout.style.height = '100vh';
-        fullScreenLayout.style.display = 'flex';
-        fullScreenLayout.style.backgroundColor = 'rgba(0, 0, 0, 0.7)'; // Optional: Add a semi-transparent background
+   function openNewLayout(frameIndex) {
+    const fullScreenLayout = document.createElement('div');
+    fullScreenLayout.style.position = 'fixed';
+    fullScreenLayout.style.top = '0';
+    fullScreenLayout.style.left = '0';
+    fullScreenLayout.style.width = '100vw';
+    fullScreenLayout.style.height = '100vh';
+    fullScreenLayout.style.display = 'flex';
+    fullScreenLayout.style.backgroundColor = '#ffffff'; // Semi-transparent background
+
+    // Select the content based on the current page
+    const fullScreenContent = (currentPage === 1) ? fullScreenContentPage1[frameIndex] : fullScreenContentPage2[frameIndex];
+
+    // Create two containers (one for left text, one for right content)
+    const leftDiv = document.createElement('div');
+
+       leftDiv.style.flex = '0.25'; // Adjust flex for left container (e.g., 30% of the width)
+leftDiv.style.padding = '1.5rem'; // Add padding for text (2rem is just an example, adjust as needed)
+leftDiv.style.paddingTop = '0.5rem';
+leftDiv.style.display = 'flex'; // Enable flexbox for centering
+leftDiv.style.flexDirection = 'column'; // Vertical stacking of elements
+leftDiv.style.alignItems = 'flex-start'; // Align text horizontally to the left
+leftDiv.style.color = 'black'; // Set text color
+leftDiv.style.fontSize = '24px'; // Adjust the font size
+leftDiv.style.backgroundColor = 'rgba(255, 255, 255, 0.8)'; // Half-transparent background
+leftDiv.innerHTML = `<p>${fullScreenContent.leftText}</p>`;
+leftDiv.style.textAlign = 'left'; // Align text to the left
 
 
-        // Select the content based on the current page
-        const fullScreenContent = (currentPage === 1) ? fullScreenContentPage1[frameIndex] : fullScreenContentPage2[frameIndex];
 
-        // Create two containers (one for left text, one for right content)
-        const leftDiv = document.createElement('div');
-        leftDiv.style.flex = '1';
-        leftDiv.innerHTML = `<p>${fullScreenContent.leftText}</p>`;
-        leftDiv.style.backgroundColor = 'rgba(255, 255, 255, 0.5)'; // Half-transparent white background
+    const rightDiv = document.createElement('div');
+    rightDiv.style.flex = '0.84'; // Adjust flex for right container (e.g., 70% of the width)
+    rightDiv.style.padding = '0'; // Add padding for content
+    rightDiv.innerHTML = fullScreenContent.rightContent;
+    rightDiv.style.overflowY = 'auto'; // Allow vertical scrolling
+    rightDiv.style.backgroundColor = 'rgba(255, 255, 255, 0.8)'; // Half-transparent green
 
-        const rightDiv = document.createElement('div');
-        rightDiv.style.flex = '1';
-        rightDiv.innerHTML = fullScreenContent.rightContent;
-        rightDiv.style.overflowY = 'auto'; // Allow vertical scrolling
-        rightDiv.style.backgroundColor = 'green(255, 255, 255, 0.5)'; // Half-transparent
-    
-        // Hide the scrollbar (works on WebKit browsers)
-        rightDiv.style.scrollbarWidth = 'none'; // For Firefox
-        rightDiv.style.msOverflowStyle = 'none'; // For Internet Explorer and Edge
-        rightDiv.style.overflow = '-moz-scrollbars-none'; // For older versions of Firefox
+    // Hide the scrollbar (works on WebKit browsers)
+    rightDiv.style.scrollbarWidth = 'none'; // For Firefox
+    rightDiv.style.msOverflowStyle = 'none'; // For Internet Explorer and Edge
+
+    // Create a close button
+    const closeButton = document.createElement('button');
+    closeButton.textContent = 'Close';
+    closeButton.style.position = 'absolute';
+    closeButton.style.top = '20px';
+    closeButton.style.right = '20px';
+    closeButton.style.padding = '10px 20px';
+    closeButton.style.fontSize = '18px';
+    closeButton.style.backgroundColor = '#fff';
+    closeButton.style.border = 'none';
+    closeButton.style.cursor = 'pointer';
+
+    // Add event listener to close button to return to the original content
+    closeButton.addEventListener('click', function() {
+        document.body.removeChild(fullScreenLayout); // Remove full-screen layout
+    });
+
+    // Append elements to full-screen layout
+    fullScreenLayout.appendChild(leftDiv);
+    fullScreenLayout.appendChild(rightDiv);
+    fullScreenLayout.appendChild(closeButton);
+
+    // Append full-screen layout to the body
+    document.body.appendChild(fullScreenLayout);
+}
 
 
-        // Create a close button
-        const closeButton = document.createElement('button');
-        closeButton.textContent = 'Close';
-        closeButton.style.position = 'absolute';
-        closeButton.style.top = '20px';
-        closeButton.style.right = '20px';
-        closeButton.style.padding = '10px 20px';
-        closeButton.style.fontSize = '18px';
-        closeButton.style.backgroundColor = '#fff';
-        closeButton.style.border = 'none';
-        closeButton.style.cursor = 'pointer';
 
-        // Add event listener to close button to return to the original content
-        closeButton.addEventListener('click', function() {
-            document.body.removeChild(fullScreenLayout); // Remove full-screen layout
-        });
-
-        // Append elements to full-screen layout
-        fullScreenLayout.appendChild(leftDiv);
-        fullScreenLayout.appendChild(rightDiv);
-        fullScreenLayout.appendChild(closeButton);
-
-        // Append full-screen layout to the body
-        document.body.appendChild(fullScreenLayout);
-    }
 
     // Function to change the content of the frames based on the selected page
     function changeContent(pageNumber) {
@@ -345,7 +405,7 @@
     const archiveText = document.getElementById('archive-text');
 
     if (pageNumber === 1) {
-        aboutText.innerHTML = "Premised on the notion of ‘regenerative utility’, leather goods label Yu Mei calibrates the codes of luxury and functionality, always with reverence for the environment and here we are";
+        aboutText.innerHTML = "premised on the notion of ‘regenerative utility’, leather goods label Yu Mei calibrates the codes of luxury and functionality, always with reverence for the environment and here we are";
         archiveText.innerHTML = "01 Dogs<br>02 Who are you<br>03 Roses<br>04 Meeeeeet me in forest ful<br>05 I know you<br>06 I love you<br>07 Hello it banny ravvit<br>08 Men in sund<br>09 The last but not least";
         
     } else {
